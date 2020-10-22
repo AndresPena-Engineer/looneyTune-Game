@@ -1,20 +1,30 @@
-//Token ID's
-//0 = blank
-//1 = carrot
-//2 = mountain
-//3 = bugs
-//4 = tweety
-//5 = muttley
-//6 = marvin
-//Board Info
-//[row][column]
-//i = row
-//j = column
-//Movement ID's
-//0 = up
-//1 =right
-//2 = down
-//3 = left
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Description:
+//              This is the main class of the game, the purpose of the game is to have all the characters play a sort of "capture the flag" game. Using multithreading.
+//              In which all characters are trying to get "carrots" as a point token and all of them are fighting against each other to reach the goal of winning.
+//              Certain characters are trying to eat each other and making it impossible to win for certain characters. Whoever eats the most and is the last person 
+//              standing wins the game.
+// Token ID's: 
+//          0 = blank
+//          1 = carrot
+//          2 = mountain
+//          3 = bugs
+//          4 = tweety
+//          5 = muttley
+//          6 = marvin
+//
+// Board Info: 
+//          [row][column]
+//          i = row
+//          j = column
+//
+// Movement ID's: s
+//          0 = up
+//          1 =right
+//          2 = down
+//          3 = left
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 package pkg380.project.pkg2;
 
 import java.util.Random;
@@ -73,6 +83,7 @@ public class Game {
         board[0][2] = 2;
     }
 
+    // This part of the main class creates the board being used in the game.
     public static void printBoard() {
         System.out.println("--------------------------");
 
@@ -134,6 +145,7 @@ public class Game {
 
 }
 
+// This method keeps track of the turn and winning score for Bugs. 
 class BugsThread extends Thread {
 
     @Override
@@ -360,6 +372,7 @@ break;
 
 }
 
+// This method keeps track of the turn and winning score for Tweety.
 class TweetyThread extends Thread {
 
     @Override
@@ -583,6 +596,7 @@ break;
 
 }
 
+// This method keeps track of the turn and winning score for Mutt.
 class MuttThread extends Thread {
 
     @Override
@@ -806,6 +820,7 @@ break;
 
 }
 
+// This method keeps track of the turn and winning score for Marvin.
 class MarvinThread extends Thread {
 
     @Override

@@ -1,6 +1,7 @@
 
 package pkg380.project.pkg2;
 
+// Java header class for the Tweety character, that is used as as a possible character to play the game with. 
 public class Tweety {
     
     public static int id = 4;
